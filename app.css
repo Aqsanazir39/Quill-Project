@@ -19,7 +19,7 @@
   ------------------- COLORS ----------------------
 
   PRIMARY
-  Base: #339af0 (Sky blue)
+  Base: #339af0 (Sky bluee)
   Tint: #d0ebff (Arctic)
   Shade: #1c7ed6 (Deep Sea)
 
@@ -41,20 +41,31 @@ Tint: #f1f3f5 (Pebble)
 Shade: #212529 (Graphite)
   */
 
+  /* ------------------------------ GLOBAL STYLES ------------------------------ */
 
-  h1, h2, h3, h4, h5 {
+
+  /* Add in universal selector later */
+body {
+  font-family: "Poppins", "sans-serif";
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -2px;
-  font-family: "Poppins", "sans-serif";
   color: #212529;
 }
 h1 {
-  text-align: center;
   font-size: 62px;
 }
 h2 {
-  text-align: center;
   font-size: 48px;
 }
 h3 {
@@ -67,14 +78,6 @@ h4 {
 
 h5 {
   font-size: 24px;
-}
-p,
-a,
-.small-text {
-  font-weight: 400;
-  line-height: 1.5;
-  font-family: "Poppins", "sans-serif";
-  color: #495057;
 }
 p {
   font-size: 20px;
@@ -92,17 +95,113 @@ ul {
   font-size: 12px;
 }
 
+/* ------------------------------ COMPONENTS ------------------------------ */
+
 .btn {
-  font-weight: 400;
-  font-family: "Poppins", "sana-serif";
   font-size: 16px;
   text-decoration: none;
 }
 
-.btn-primary {
+.btn-primary:link,
+.btn-secondary:visited {
   color: #339af0;
 }
 
-.btn-secondary {
+.btn-primary:hover,
+.btn-primary:active {
+  color: #1c7ed6;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
   color: #9775fa;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  color: #7048e8;
+}
+
+/* SPECIFICITY 
+The Cascade ::::::::::::::  Styles declared later will take priority when the selectors are the same
+
+
+::::::::::::::: Conficting Selectors ::::::::::
+When styles are applied to the same element using a different type of selector the outcome is determined by specifty.
+
+What is Specificity?
+
+Determine the priority of a CSS rule when multiple rules to the element.
+
+how we calculate specificity
+selector id class & pseudo-class type
+div div h1 ||  0 because there is no id then there is no class and pseudo class and in type column the specificity is 3 because i have 3 elements.
+*/
+
+/* INHERITANCE
+Properties set on parent elements are passed to their children By default
+
+
+GUIDANCE
+
+Global Font are set On the Body element so that all child text elements inherit styles by default.
+
+Inheritance is also often utilised for a container that requires specific text styling
+
+
+Inheritance & Text Align
+
+We've already seen that text-align affects Block-Level element but has no impact on inline- level elements
+
+when we set text-align centre property to the parent div it is inherited by child elements as well. either they are inline or block level elements.
+
+What is Universal Selector?
+It applies the styles to all of the elements.
+
+Guidance:
+Primarily used for resetting default properties and is not typically used for applying specific styling 
+
+
+UNIVERSAL SELECTOR VS BODY TAG INHERITANCE
+
+BODYTAG & INHERITANCE:
+only applies text properties
+used to set default text properties across application 
+
+THE UNICVERSAL SELECTOR
+applies all properties
+used to reset default styles.
+
+
+PSEUDO-ELEMENT
+used to style a specific part of an element.
+
+Pseduo Element: ::before ::after  ::selection etc also write from video.
+
+CSS BOX MODEL:
+each element is wrap up in a box called box modal.
+each box has its own properties.
+
+
+*/
+
+/* ------------------------------ SECTIONS ------------------------------ */
+/*-------- HERO SECTION ------- */
+.hero-section {
+  text-align: center;
+}
+
+/*-------- FEATURES SECTION  ------- */
+.features-main-heading {
+  text-align: center;
+}
+
+/*-------- CTA SECTION ------- */
+.cta-section {
+  text-align: center;
+}
+
+/*-------- FOOTER SECTION ------- */
+.footer {
+  text-align: center;
 }
