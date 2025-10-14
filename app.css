@@ -39,12 +39,25 @@
   Base: #495057 (Slate)
 Tint: #f1f3f5 (Pebble)
 Shade: #212529 (Graphite)
+whitee: #ffffff(white)
+blackk: #000000(black)
+
+
+
+  ------------------- BODER RADIUS ----------------------
+  4px / 8px / 20px
+
+  ------------------- BODER RADIUS ----------------------
+  5px / 10px  / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px 25px / 250px / 300px  / 400px / 500px 
   */
 
   /* ------------------------------ GLOBAL STYLES ------------------------------ */
 
 
-  /* Add in universal selector later */
+ * {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", "sans-serif";
   font-weight: 400;
@@ -100,28 +113,73 @@ ul {
 .btn {
   font-size: 16px;
   text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
 }
 
 .btn-primary:link,
-.btn-secondary:visited {
+.btn-primary:visited {
+  color: #ffffff;
+  background-color: #339af0;
+  border: 2px solid #339af0;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  color: #ffffff;
+  background-color: #1c7ed6;
+  border: 2px solid #1c7ed6;
+}
+
+.btn-primary-outline:link,
+.btn-primary-outline:visited {
   color: #339af0;
+  background-color: #ffffff;
+  border: 2px solid #339af0;
 }
-
-.btn-primary:hover,
-.btn-primary:active {
+.btn-primary-outline:hover,
+.btn-primary-outline:active {
   color: #1c7ed6;
+  background-color: #ffffff;
+  border: 2px solid #1c7ed6;
 }
-
-.btn-primary:hover,
-.btn-primary:active {
-  color: #9775fa;
+.btn-secondary:link,
+.btn-secondary:visited {
+  color: #ffffff;
+  background-color: #9775fa;
+  border: 2px solid #9775fa;
 }
 
 .btn-secondary:hover,
 .btn-secondary:active {
-  color: #7048e8;
+  color: #ffffff;
+  background-color: #7048e8;
+  border: 2px solid #7048e8;
 }
 
+.highlight {
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.highlight-primary {
+  background-color: #339af0;
+}
+.highlight-secondary {
+  background-color: #9775fa;
+}
+
+.highlight-tertiary {
+  background-color: #ff922b;
+}
+
+.logo-md {
+  width: 100px;
+}
+
+.log-sm {
+  width: 80px;
+}
 /* SPECIFICITY 
 The Cascade ::::::::::::::  Styles declared later will take priority when the selectors are the same
 
@@ -186,22 +244,45 @@ each box has its own properties.
 */
 
 /* ------------------------------ SECTIONS ------------------------------ */
+/*-------- NAVBAR SECTION ------- */
+.navbar {
+  margin-bottom: 200px;
+}
 /*-------- HERO SECTION ------- */
 .hero-section {
   text-align: center;
 }
-
+.hero-heading {
+  margin-bottom: 10px;
+}
+.hero-paragraph {
+  margin-bottom: 100px;
+}
 /*-------- FEATURES SECTION  ------- */
 .features-main-heading {
   text-align: center;
 }
 
-/*-------- CTA SECTION ------- */
-.cta-section {
-  text-align: center;
+.features-img {
+  width: 300px;
 }
 
+/*-------- CTA SECTION ------- */
+/* .cta-section {
+  text-align: center;
+} */
+.cta-card {
+  background-color: #339af0;
+  width: 1000px;
+  padding: 100px 200px;
+  text-align: center;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
 /*-------- FOOTER SECTION ------- */
 .footer {
   text-align: center;
+}
+.social-icons {
+  width: 20px;
 }
