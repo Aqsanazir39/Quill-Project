@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.box1 {
+  background-color: rgb(185, 9, 117);
+  min-width: 200px;
+  max-width: 400px;
+  min-height: 100px;
+  padding: 15px;
+}
+
+:root {
+  --primary: #e0709c;
+  --grey: #f5f1f1;
+  --textLg: 50px;
+  --textsm: 20px;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--grey);
+  padding: 20px 40px;
+  margin-bottom: 40px;
+  display: inline-block;
+  font-size: var(--textsm);
+}
+.div1 {
+  background-color: var(--primary);
+
+  width: 800px;
+  height: 400px;
+}
+h1 {
+  font-size: var(--textLg);
+  color: var(--grey);
+}

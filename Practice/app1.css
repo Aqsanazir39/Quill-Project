@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 300px;
+  width: 300px;
+  border: 3px solid lightskyblue;
+  border-radius: 20px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.block-1 {
+  display: flex;
+  gap: 10px;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  flex-basis: (100%/3);
+}
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9 {
+  background-color: lightgray;
+  color: black;
+  font-size: 28px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 30px;
+}
+
+/*  ------------------------------Navbar----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Container */
+.nav-header {
+  width: 1000px;
+  margin: 20px auto;
+  height: 80px;
+  background-color: #cfcdcd;
+  border: 3px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+/* NAV takes full width */
+nav {
+  width: 100%;
+}
+
+/* UL becomes flex + takes full width */
+ul {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+/* List items */
+li {
+  list-style: none;
+  font-size: 22px;
+}
+
+.btn-div {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  background-color: lightskyblue;
+  color: black;
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+/* ----------------------------3rd Task------------------------------ */
+.mid-Contaner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  border: 3px solid lightskyblue;
+  width: 500px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  border: 3px solid lightskyblue;
+  width: 150px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}

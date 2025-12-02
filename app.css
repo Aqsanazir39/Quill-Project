@@ -1,9 +1,10 @@
------------- TYPOGRAPHY ------------
-  /* FONT SIZES 
-  12px / 16px/ 20px / 24px/ 32px/ 40px/ 48px/ 62px
-  
+/* ------------------------------ NOTES ------------------------------ */
 
-  FONT SIZES
+/* TYPOGRAPHY 
+  FONT SIZES 
+  12px / 16px / 20px / 24px / 32px / 40px / 48px / 62px
+  
+  FONT WEIGHTS
   400 / 700
 
   LINE HEIGHTS
@@ -14,55 +15,109 @@
 
   FONT FAMILY
   Poppins
+*/
 
-
-  ------------------- COLORS ----------------------
-
+/* COLORS
   PRIMARY
-  Base: #339af0 (Sky bluee)
-  Tint: #d0ebff (Arctic)
-  Shade: #1c7ed6 (Deep Sea)
-
+  Base: #339af0
+  Tint: #d0ebff
+  Shade: #1c7ed6
 
   SECONDARY
-  Base: #9775fa (Lavender)
-  Tint: #e5dbff (MoonLight iris)
-  Shade: #7048e8 (Valvet Night)
+  Base: #9775fa
+  Tint: #e5dbff
+  Shade: #7048e8
 
   TERTIARY
-  Base: #ff922b (Pumpkin)
-  Tint: #ffebcc (Dawn)
-  Shade: #f76707 (Lava)
-
+  Base: #ff922b
+  Tint: #ffebcc
+  Shade: #f76707
 
   GREY
-  Base: #495057 (Slate)
-Tint: #f1f3f5 (Pebble)
-Shade: #212529 (Graphite)
-whitee: #ffffff(white)
-blackk: #000000(black)
+  Base: #495057
+  Tint: #f1f3f5
+  Shade: #212529
+  White: #ffffff
+  Black: #000000
+*/
 
-
-
-  ------------------- BODER RADIUS ----------------------
+/* BORDER RADIUS
   4px / 8px / 20px
+  5px / 10px / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px /
+  90px / 100px / 125px / 150px / 200px / 250px / 300px / 400px / 500px 
+*/
 
-  ------------------- BODER RADIUS ----------------------
-  5px / 10px  / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px 25px / 250px / 300px  / 400px / 500px 
-  */
+/* ------------------------------ GLOBAL STYLES ------------------------------ */
+:root {
+  /* FONT SIZES */
+  --text-sm: 1.2rem;
+  --text-base: 1.6rem;
+  --text-paragraph: 2rem;
+  --text-h5: 2.4rem;
+  --text-h4: 3.2rem;
+  --text-h3: 4rem;
+  --text-h2: 4.8rem;
+  --text-h1: 6.2rem;
 
-  /* ------------------------------ GLOBAL STYLES ------------------------------ */
+  /* FONT WEIGHT */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
+  /* LINE HEIGHTS */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
 
- * {
+  /* LETTER SPACING */
+  --letter-spacing-tight: -2px;
+
+  /* FONT-FAMILY */
+  --font-family: "Poppins", sans-serif;
+
+  /* COLORS */
+  --primary-base: #339af0;
+  --primary-tint: #d0ebff;
+  --primary-shade: #1c7ed6;
+
+  --secondary-base: #9775fa;
+  --secondary-tint: #e5dbff;
+  --secondary-shade: #7048e8;
+
+  --tertiary-base: #ff922b;
+  --tertiary-tint: #ffebcc;
+  --tertiary-shade: #f76707;
+
+  --grey-base: #495057;
+  --grey-tint: #f1f3f5;
+  --grey-shade: #212529;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  /* MISC */
+  --navbar-height: 100px;
+}
+
+* {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 body {
-  font-family: "Poppins", "sans-serif";
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--grey-base);
 }
 
 h1,
@@ -70,219 +125,212 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -2px;
-  color: #212529;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--grey-shade);
 }
+
 h1 {
-  font-size: 62px;
+  font-size: var(--text-h1);
 }
 h2 {
-  font-size: 48px;
+  font-size: var(--text-h2);
 }
 h3 {
-  font-size: 40px;
+  font-size: var(--text-h3);
 }
-
 h4 {
-  font-size: 32px;
+  font-size: var(--text-h4);
+}
+h5 {
+  font-size: var(--text-h5);
 }
 
-h5 {
-  font-size: 24px;
-}
 p {
-  font-size: 20px;
+  font-size: var(--text-paragraph);
 }
+
 a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: var(--text-base);
+  display: inline-block;
 }
 
 ul {
   list-style: none;
 }
 
+span {
+  display: inline-block;
+}
+
 .small-text {
-  font-size: 12px;
+  font-size: var(--text-sm);
 }
 
 /* ------------------------------ COMPONENTS ------------------------------ */
 
 .btn {
-  font-size: 16px;
-  text-decoration: none;
-  padding: 15px 30px;
+  font-size: var(--text-base);
+  padding: 1.5rem 3rem;
   border-radius: 8px;
 }
 
 .btn-primary:link,
 .btn-primary:visited {
-  color: #ffffff;
-  background-color: #339af0;
-  border: 2px solid #339af0;
+  color: var(--white);
+  background-color: var(--primary-base);
+  border: 2px solid var(--primary-base);
 }
 
 .btn-primary:hover,
 .btn-primary:active {
-  color: #ffffff;
-  background-color: #1c7ed6;
-  border: 2px solid #1c7ed6;
+  color: var(--white);
+  background-color: var(--primary-shade);
+  border: 2px solid var(--primary-shade);
 }
 
 .btn-primary-outline:link,
 .btn-primary-outline:visited {
-  color: #339af0;
-  background-color: #ffffff;
-  border: 2px solid #339af0;
+  color: var(--primary-base);
+  background-color: var(--white);
+  border: 2px solid var(--primary-base);
 }
+
 .btn-primary-outline:hover,
 .btn-primary-outline:active {
-  color: #1c7ed6;
-  background-color: #ffffff;
-  border: 2px solid #1c7ed6;
+  color: var(--primary-shade);
+  background-color: var(--white);
+  border: 2px solid var(--primary-shade);
 }
+
 .btn-secondary:link,
 .btn-secondary:visited {
-  color: #ffffff;
-  background-color: #9775fa;
-  border: 2px solid #9775fa;
+  color: var(--white);
+  background-color: var(--secondary-base);
+  border: 2px solid var(--secondary-base);
 }
 
 .btn-secondary:hover,
 .btn-secondary:active {
-  color: #ffffff;
-  background-color: #7048e8;
-  border: 2px solid #7048e8;
+  color: var(--white);
+  background-color: var(--secondary-shade);
+  border: 2px solid var(--secondary-shade);
 }
 
 .highlight {
-  color: #ffffff;
-  padding: 5px 10px;
+  color: var(--white);
+  padding: 0.5rem 1rem;
   border-radius: 4px;
 }
+
 .highlight-primary {
-  background-color: #339af0;
+  background-color: var(--primary-base);
 }
 .highlight-secondary {
-  background-color: #9775fa;
+  background-color: var(--secondary-base);
 }
-
 .highlight-tertiary {
-  background-color: #ff922b;
+  background-color: var(--tertiary-base);
 }
 
 .logo-md {
   width: 100px;
 }
 
-.log-sm {
+.logo-sm {
   width: 80px;
 }
-/* SPECIFICITY 
-The Cascade ::::::::::::::  Styles declared later will take priority when the selectors are the same
-
-
-::::::::::::::: Conficting Selectors ::::::::::
-When styles are applied to the same element using a different type of selector the outcome is determined by specifty.
-
-What is Specificity?
-
-Determine the priority of a CSS rule when multiple rules to the element.
-
-how we calculate specificity
-selector id class & pseudo-class type
-div div h1 ||  0 because there is no id then there is no class and pseudo class and in type column the specificity is 3 because i have 3 elements.
-*/
-
-/* INHERITANCE
-Properties set on parent elements are passed to their children By default
-
-
-GUIDANCE
-
-Global Font are set On the Body element so that all child text elements inherit styles by default.
-
-Inheritance is also often utilised for a container that requires specific text styling
-
-
-Inheritance & Text Align
-
-We've already seen that text-align affects Block-Level element but has no impact on inline- level elements
-
-when we set text-align centre property to the parent div it is inherited by child elements as well. either they are inline or block level elements.
-
-What is Universal Selector?
-It applies the styles to all of the elements.
-
-Guidance:
-Primarily used for resetting default properties and is not typically used for applying specific styling 
-
-
-UNIVERSAL SELECTOR VS BODY TAG INHERITANCE
-
-BODYTAG & INHERITANCE:
-only applies text properties
-used to set default text properties across application 
-
-THE UNICVERSAL SELECTOR
-applies all properties
-used to reset default styles.
-
-
-PSEUDO-ELEMENT
-used to style a specific part of an element.
-
-Pseduo Element: ::before ::after  ::selection etc also write from video.
-
-CSS BOX MODEL:
-each element is wrap up in a box called box modal.
-each box has its own properties.
-
-
-*/
 
 /* ------------------------------ SECTIONS ------------------------------ */
-/*-------- NAVBAR SECTION ------- */
+
+/* NAVBAR SECTION */
 .navbar {
-  margin-bottom: 200px;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-/*-------- HERO SECTION ------- */
+.nav-btn-container {
+  display: flex;
+  gap: 2rem;
+}
+/* HERO SECTION */
 .hero-section {
+  height: calc(100vh - var(--navbar-height));
+  min-height: 400px;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-heading {
+  margin-bottom: 1rem;
   text-align: center;
 }
-.hero-heading {
-  margin-bottom: 10px;
-}
+
 .hero-paragraph {
-  margin-bottom: 100px;
+  margin-bottom: 5rem;
 }
-/*-------- FEATURES SECTION  ------- */
+
+.hero-btn-container {
+  display: flex;
+  gap: 2rem;
+}
+/* FEATURES SECTION */
 .features-main-heading {
   text-align: center;
+  margin-bottom: 8rem;
 }
 
 .features-img {
-  width: 300px;
+  max-width: 400px;
+  width: 100%;
 }
 
-/*-------- CTA SECTION ------- */
-/* .cta-section {
-  text-align: center;
-} */
+.features-headings {
+  margin-bottom: 2rem;
+}
+
+/* CTA SECTION */
+.cta-section {
+  margin-bottom: 30rem;
+  display: flex;
+  justify-content: center;
+}
+
 .cta-card {
-  background-color: #339af0;
-  width: 1000px;
-  padding: 100px 200px;
+  background-color: var(--primary-base);
+  max-width: 1000px;
+  width: 100%;
+  padding: 10rem 20rem;
   text-align: center;
   border-radius: 20px;
-  box-sizing: border-box;
 }
-/*-------- FOOTER SECTION ------- */
+
+.cta-heading {
+  margin-bottom: 3rem;
+}
+
+/* FOOTER */
 .footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
+
 .social-icons {
   width: 20px;
+}
+.social-icons-container {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-links-container {
+  display: flex;
+  gap: 1.5rem;
 }

@@ -58,6 +58,11 @@ nav a {
   color: black;
 }
 
+.div-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .about {
   display: flex;
   margin-bottom: 40px;

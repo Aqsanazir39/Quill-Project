@@ -22,9 +22,10 @@ img {
 }
 
 .sec-1 {
-  font-size: 14px;
-  width: 300px;
-  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .para-1 {
   width: 250px;
