@@ -281,6 +281,10 @@ span {
   gap: 2rem;
 }
 /* FEATURES SECTION */
+.features-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .features-main-heading {
   text-align: center;
   margin-bottom: 8rem;
