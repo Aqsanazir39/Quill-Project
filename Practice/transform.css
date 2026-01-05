@@ -1,0 +1,19 @@
+.box {
+  font-size: 20px;
+  font-weight: 600px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: slateblue;
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.p {
+  position: relative;
+}
